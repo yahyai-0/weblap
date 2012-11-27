@@ -24,7 +24,11 @@
 			</tabpanel>
 			
 			<tabpanel id="DesignTab" class="border1" orient="vertical">
+				
+				<tabbox flex="1"  id="toolboxTab1" selectedIndex="0">
+					<tabpanels flex="1" class="border1">
 				<toolbar id="nav-toolbar" mode="icon"  class="border1" align="center" >
+					
 					<vbox flex="1" height="150">
 			
 						<hbox flex="1" id="fileToolbar" class="border1">
@@ -99,6 +103,9 @@
 						<label class="testborder" height="15">Paragraph</label>
 					</vbox>
 				</toolbar>
+				</tabpanels>
+				</tabbox>
+				
 				<hbox flex="1" class="test_b" id="DesignViewLayout">
 	  
 	  <vbox flex="1" class="editorShadow" >
@@ -108,10 +115,10 @@
 		</hbox>
 			</tabpanel>
 			<tabpanel id="UtilsTab" class="border1">
-				here tool3
+				here page managment tab
 			</tabpanel>
 			<tabpanel id="ApplicationsTab" class="border1">
-				here tool4
+				p
 			</tabpanel>
 		</tabpanels>
 	</tabbox>
