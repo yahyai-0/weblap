@@ -1,0 +1,10 @@
+
+
+function showTabpanel(tabName) {
+	var tabpanel = document.getElementById(tabName);
+	document.getElementById("toolboxTab").selectedPanel = tabpanel;
+	alert("pressed");
+}
+
+function onLoad() {
+	document.getElementById('generalbt').click();

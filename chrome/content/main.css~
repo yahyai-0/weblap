@@ -1,0 +1,76 @@
+.test_a {
+background-color: #808080;
+border-width: thin;
+}
+.test_b {
+background-color: #c0c0c0;
+}
+.border1{
+background-color:#727272;
+}
+.object{
+background-color:#404040;
+}
+
+button.s{
+border:none;
+-moz-appearance: none;
+background-image: -moz-linear-gradient(rgb(57, 126, 3), rgb(11, 75, 0));
+box-shadow: #000 0 2px 5px inset;
+}
+
+hbox.a{
+-moz-appearance: none;
+background: -moz-linear-gradient(rgba(81, 86, 100, 0.95), rgba(57, 61, 71, 0.95) 88%, rgba(51, 54, 63, 0.95)) repeat scroll 0% 0% transparent;
+position: relative;
+height: 49px;
+}
+tabbox {
+  margin: 0;
+}
+
+tabpanels {
+  -moz-appearance: none; 
+  padding: 15px 10px 10px 10px;
+  margin: 5px 5px 0 5px;
+  border: solid transparent;
+  border-width: 4px 4px;
+}
+
+tabs {
+  -moz-box-align: center;
+  color: #000;
+}
+
+tabbox > tabs {
+  padding: 0 10px;
+  margin-bottom: -18px;
+  position: relative;
+}
+
+tab {
+  -moz-appearance: none;
+}
+
+tab:first-of-type {
+  -moz-padding-start: 2px;
+}
+
+tab:last-of-type {
+  -moz-padding-end: 2px;
+}
+
+tabbox > tabs > tab {
+  -moz-appearance: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 24px;
+  border: solid transparent;
+  border-width: 0 8px;
+}
+
+tabbox > tabs > tab > .tab-middle {
+  padding: 0;
+}
+

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="main.css" type="text/css"?>
+
+<window id="main" title="My App" width="300" height="300" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/javascript" src="chrome://weblap/content/main.js"/>
+  <hbox height="150" id="toolBoxLayout">
+	<tabbox flex="1" class="border1">
+		<tabs class="border1">
+			<tab label="General"/>
+			<tab label="Design"/>
+			<tab label="Utils"/>
+			<tab label="Applications"/>
+		</tabs>
+		<tabpanels flex="1" class="border1">
+			<tabpanel id="GeneralTab" class="border1">
+				here tools1
+			</tabpanel>
+			<tabpanel id="DesignTab" class="border1">
+				here tool2
+			</tabpanel>
+			<tabpanel id="UtilsTab" class="border1">
+				here tool3
+			</tabpanel>
+			<tabpanel id="ApplicationsTab" class="border1">
+				here tool4
+			</tabpanel>
+		</tabpanels>
+	</tabbox>
+  </hbox>
+  
+  <hbox flex="1" class="test_b" id="DesignViewLayout">
+	  <vbox flex="1" >
+		<editor type="content-primary" id="content-frame" src="about:blank" flex="1"/>
+		</vbox>
+	
+	  <vbox class="border1" width="35">
+		  
+	  </vbox>
+	  
+  </hbox>
+
+</window>

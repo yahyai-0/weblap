@@ -1,0 +1,106 @@
+
+.test_a {
+background-color: #808080;
+border-width: thin;
+}
+.test_b {
+background-color: #c0c0c0;
+padding:15px;
+}
+.border1{
+ -moz-appearance: none; 
+background: none repeat scroll 0% 0% rgb(54, 57, 70);
+color: rgb(255, 255, 255);
+border:none;
+
+}
+.object{
+background-color:#404040;
+}
+
+
+.t
+{
+	border:none;
+	-moz-appearance: none;
+	color:rgb(255, 255, 255);
+	font-family:arial, serif;
+	text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+.testb{
+
+
+}
+.testborder{
+	padding:0;
+	margin:0;
+    border:none;
+	-moz-appearance: none;
+    text-align:center;
+    font-size: 11px;
+    color:rgb(255, 255, 255);
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.03), 1px 1px 0px rgba(255, 255, 255, 0.04) inset;
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)) repeat scroll 0% 0% transparent;
+}
+}
+.testT{
+	-moz-appearance: none;
+	cursor: pointer;
+	border:none;
+	width: 48px;
+	height: 100px;
+	text-align:bottom;
+	float:bottom;
+	top-padding:300px;
+	-moz-box-orient:vertical;
+
+
+}
+button.s{
+border:none;
+margin:0px;
+-moz-appearance: none;
+font-size: 14px;
+font-weight:bold;
+font-family:arial, serif;
+color:rgb(255, 255, 255);
+background-color: transparent;
+/*background-image:-moz-linear-gradient(-90deg, rgb(0, 51, 204), rgb(0, 51, 153)); shiny blue button
+ * box-shadow: #000 0 1px 2px inset;*/
+text-shadow: 0px 0px 5px rgb(255, 255, 255);
+
+}
+button.s:focus{
+	border:none;
+	margin:0px;
+	-moz-appearance: none;
+	cursor: pointer;
+	color:rgb(255, 255, 255);
+	font-family:arial, serif;
+	text-shadow: 0px 0px 5px rgb(255, 255, 255);
+	font-size: 14px;
+	background-color: #1f2128;
+	/*box-shadow:0px 1px 2px inset rgb(0, 0, 0);
+	background-image:-moz-linear-gradient(-90deg, rgb(0, 0, 204), rgb(0, 0, 102));*/
+}
+
+hbox.a{
+-moz-appearance: none;
+background: -moz-linear-gradient(rgba(81, 86, 100, 0.95), rgba(57, 61, 71, 0.95) 88%, rgba(51, 54, 63, 0.95)) repeat scroll 0% 0% transparent;
+position: relative;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6), 0px 1px 0px rgba(255, 255, 255, 0.1) inset, 0px -1px 0px rgba(0, 0, 0, 0.2) inset;
+z-index: 10;
+height: 49px;
+
+}
+
+.editorShadow{
+box-shadow: 0px 0px 7px #000;
+
+}
+
+
+
+
+
