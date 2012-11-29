@@ -18,30 +18,95 @@
   <script type="application/javascript" src="chrome://weblap/content/js/main.js"/>
   
   <hbox  height="35" class="a">
-	<button id="generalbt" flex="1" class="s" label="Start" onclick="showTabpanel('GeneralTab');"/>
-	<button flex="1" class="s" label="Design" oncommand="showTabpanel('DesignTab');"/>
-	<button flex="1" class="s" label="Pages" oncommand="showTabpanel('UtilsTab');"/>
-	<button flex="1" class="s" label="Puplish" oncommand="showTabpanel('ApplicationsTab');"/>
+	<button id="generalbt" flex="1" class="s" label="Start" onclick="showTabpanel('GeneralTab' ,'toolboxTab');"/>
+	<button flex="1" class="s" label="Design" oncommand="showTabpanel('DesignTab','toolboxTab');"/>
+	<button flex="1" class="s" label="Pages" oncommand="showTabpanel('UtilsTab','toolboxTab');"/>
+	<button flex="1" class="s" label="Puplish" oncommand="showTabpanel('ApplicationsTab','toolboxTab');"/>
   </hbox>
-  
+
   <hbox  flex="1" id="toolBoxLayout" class="border1">
 	<tabbox flex="1"  id="toolboxTab" selectedIndex="0">
 		<tabpanels flex="1" class="border1">
 			<tabpanel flex="1" id="GeneralTab" class="border1">
-				Star
+				Start
 				
 			</tabpanel>
 			
-			<tabpanel id="DesignTab" class="border1" orient="vertical">
-				<tabbox flex="1"  id="toolboxTab1" selectedIndex="0">
-					<tabpanels flex="1" class="border1">
+			<tabpanel height="70" id="DesignTab" class="border1" orient="vertical">
+				
+						<hbox>
+						<vbox  width="10" class="a">
+						<button  class="s" label="Project" onclick="showTabpanel('GeneralTab','toolboxTab1');"/>
+						<button  class="s" label="Editor" oncommand="showTabpanel('DesignTab','toolboxTab1');"/>
+						<button  class="s" label="Element" oncommand="showTabpanel('UtilsTab','toolboxTab1');"/>
+						<button  class="s" label="Apps" oncommand="showTabpanel('ApplicationsTab','toolboxTab1');"/>
+						</vbox>
+				<tabbox height="70"  flex="1"  id="toolboxTab1" selectedIndex="0">				
+					<tabpanels height="70" flex="1" class="border1">
+						<tabpanel flex="1">
+						<toolbar flex="1" height="70" id="nav-toolbar" mode="icon"  class="border1" align="center" >
 						
-#include xul/toolbar.inc
-
+						<hbox flex="1"  class="border1">
+							<toolbarbutton class="testb" image="chrome://weblap/content/style/icon/new.png" tooltiptext="Create new document" oncommand="newDocumentCommand"/>
+							<toolbarbutton image="chrome://weblap/content/style/icon/open.png"  tooltiptext="Open an existing document" oncommand="loadDocumentCommand"/>
+							<toolbarbutton image="chrome://weblap/content/style/icon/save.png"  tooltiptext="Save this document" oncommand="saveDocumentCommand"/>
+							<toolbarbutton image="chrome://weblap/content/style/icon/print.png"  tooltiptext="print this document" oncommand="formateCmd('print')"/>
+							<toolbarbutton class="testb" image="chrome://weblap/content/style/icon/undo.png" tooltiptext="undo" oncommand="formatCmd('undo')"/>
+							<toolbarbutton image="chrome://weblap/content/style/icon/redo.png"  tooltiptext="redo" oncommand="formatCmd('redo')"/>
+							<toolbarbutton image="chrome://weblap/content/style/icon/cut.png"  tooltiptext="cut" oncommand="formatCmd('cut')"/>
+							<toolbarbutton image="chrome://weblap/content/style/icon/copy.png"  tooltiptext="copy" oncommand="formatCmd('copy')"/>
+							<toolbarbutton image="chrome://weblap/content/style/icon/paste.png"  tooltiptext="paste" oncommand="formatCmd('paste')"/>
+						</hbox>
+					</toolbar>
+					</tabpanel>
+					
+					<tabpanel>
+					<toolbar flex="1" height="70" id="nav-toolbar" mode="icon"  class="border1" align="center" >
+						 <hbox >
+						<menulist oncommand="formatCmd2('fontname' ,this.selectedItem.label);">
+							<menupopup >
+								<menuitem label="Default Font" value="sans-serif" />
+								<menuitem label="Agency" value="agency" />
+								<menuitem label="Arial" value="arial" />
+								<menuitem label="Comic Sans MS" value="Comic Sans MS" />
+								<menuitem label="Courier New" value="Courier New" />
+								<menuitem label="Georgia" value="georgia" />
+								<menuitem label="Monotype Corsiva" value="Monotype Corsiva" />
+								<menuitem label="Tahoma" value="tahoma" />
+								<menuitem label="Times New Roman" value="Times New Roman" />
+								<menuitem label="Trebuchet" value="trebuchet" />
+								<menuitem label="Verdana" value="verdana" />
+							</menupopup>
+						</menulist>
+						
+						<toolbarbutton id="text-increase-button" image="chrome://weblap/content/style/icon/decreasefont.png" oncommand="formatCmd('increasefontsize')" tooltiptext="increase font"/>
+						<toolbarbutton id="text-decrease-button" image="chrome://weblap/content/style/icon/increasefont.png" oncommand="formatCmd('decreasefontsize')" tooltiptext="decrease font"/>
+						<toolbarbutton image="chrome://weblap/content/style/icon/bold.png" tooltiptext="bold" oncommand="formatCmd('bold')"/>
+						<toolbarbutton image="chrome://weblap/content/style/icon/italic.png"  tooltiptext="italic" oncommand="formatCmd('italic')"/>
+						<toolbarbutton image="chrome://weblap/content/style/icon/underline.png"  tooltiptext="underline" oncommand="formatCmd('underline')"/>
+						<toolbarbutton image="chrome://weblap/content/style/icon/strike_trough.png"  tooltiptext="strike" oncommand="formatCmd('strikethrough')"/>
+						<toolbarbutton image="chrome://weblap/content/style/icon/subscript.png"  tooltiptext="subscript" oncommand="formatCmd('subscript')"/>
+						<toolbarbutton image="chrome://weblap/content/style/icon/superscript.png"  tooltiptext="superscript" oncommand="formatCmd('superscript')"/>
+						<toolbarbutton image="chrome://weblap/content/style/icon/select_color_text.png"  tooltiptext="Save this document" oncommand="formatCmd(cmd)"/>
+						<toolbarbutton class="testb" image="chrome://weblap/content/style/icon/numbered_list.png" tooltiptext="Create new document" oncommand="formatCmd('insertorderedlist')"/>
+						<toolbarbutton image="chrome://weblap/content/style/icon/bulleted_list.png"  tooltiptext="Open an existing document" oncommand="formatCmd('insertunorderedlist')"/>
+						<toolbarbutton image="chrome://weblap/content/style/icon/align_justify.png"  tooltiptext="Save this document" oncommand="formatCmd('justifyfull')"/>
+						<toolbarbutton image="chrome://weblap/content/style/icon/align_center.png"  tooltiptext="Open an existing document" oncommand="formatCmd('justifycenter')"/>
+						<toolbarbutton image="chrome://weblap/content/style/icon/align_left.png"  tooltiptext="Save this document" oncommand="formatCmd('justifyleft')"/>
+						<toolbarbutton image="chrome://weblap/content/style/icon/align_right.png"  tooltiptext="Save this document" oncommand="formatCmd('justifyright')"/>
+						</hbox>
+				</toolbar>
+				</tabpanel>
+				<tapbanel>
+					here Html Element
+				</tapbanel>
+				<tapbanel>
+					here apps 
+				</tapbanel>
 				</tabpanels>
 				</tabbox>
-				
-				<hbox flex="1" class="test_b" id="DesignViewLayout">
+				</hbox>
+				<hbox height="400" flex="1" class="test_b" id="DesignViewLayout">
 	  
 	  <vbox flex="1" class="editorShadow" >
 		<editor flex="1" class="d" type="content-primary" id="editor" editortype="html" />

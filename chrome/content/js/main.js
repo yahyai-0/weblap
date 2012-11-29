@@ -8,9 +8,9 @@ function onLoad() {
 	fontSize=document.getElementById('fontSize');
 }
 
-function showTabpanel(tabName) {
+function showTabpanel(tabName , toolboxID) {
 	var tabpanel = document.getElementById(tabName);
-	document.getElementById("toolboxTab").selectedPanel = tabpanel;
+	document.getElementById(toolboxID).selectedPanel = tabpanel;
 	
 }
 
